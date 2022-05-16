@@ -19,7 +19,7 @@ To run the code:
 - Write in the command line: ```python src/emotion_classification.py + argparse parameters```
 
 ## 4. Discussion of Results 
-The model has an overall accuracy of 63 % on the validation data. However, there are large differences on how the model performs on the individual classes. It classifies fear at 47% and happy at 83%. Furthermore, the model classifies happy and sad best by far, which suggests that the model would perhaps very accurately on a binary classification task between those two classes. 
+The model has an overall accuracy of 63% on the validation data. However, there are large differences on how the model performs on the individual classes. It classifies fear at 47% and happy at 83%. Furthermore, the model classifies happy and sad best by far, which suggests that the model would perhaps very accurately on a binary classification task between those two classes. 
 
 I tested different parameters and layers, where especially adding more epochs made the loss functions and accuracies of the validation and testing data to diverge. The code that produced the plots and classification report in ```out``` return the highest accuracy of all as well as the best fit between loss and accuracy.
 

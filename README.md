@@ -3,7 +3,7 @@ Discription of what the script does and what kind of problem it tries to solve
 
 ## 2. Methods
 
-Download data from command line: ```wget -O ../in/fer2013.csv https://www.dropbox.com/s/zi48lkarsg4kbry/fer2013.csv\?dl\=1```
+Download data from command line: ```wget -O in/fer2013.csv https://www.dropbox.com/s/zi48lkarsg4kbry/fer2013.csv\?dl\=1```
 or from this link: https://www.dropbox.com/s/zi48lkarsg4kbry/fer2013.csv\?dl\=1
 
 The ```load_dataset()``` function was found through https://colab.research.google.com/github/RodolfoFerro/PyConCo20/blob/full-code/notebooks/Deep%20Learning%20Model.ipynb#scrollTo=9v3fuYQb139s and further adapted. 
@@ -15,7 +15,7 @@ To run the code:
 - Pull this repository with this folder structure
 - Install the packages mentioned in ```requirements.txt```
 - Set your current working directory to the level above ```src```
-- Download the data and place it in ```out```
+- Download the data and place it in ```in```
 - Write in the command line: ```python src/emotion_classification.py + argparse parameters```
 
 ## 4. Discussion of Results 

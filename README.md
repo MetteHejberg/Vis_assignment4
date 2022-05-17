@@ -18,7 +18,8 @@ To run the code:
 - Install the packages mentioned in ```requirements.txt```
 - Set your current working directory to the level above ```src```
 - Download the data and place it in ```in```
-- Write in the command line: ```python src/emotion_classification.py + argparse parameters```
+- Write in the command line: ```python src/emotion_classification.py -e "the epochs of the model" -b "the batch size of the model```
+  - The outputs in ```out``` were created with: ```python src/emotion_classification.py -e 20 -b 64```
 
 ## 4. Discussion of Results 
 The model has an overall accuracy of 60%, though reaching 63% on other runs, on the validation data. However, there are large differences on how the model performs on the individual classes. It classifies fear at 35% and happy at 82%. Furthermore, the model classifies happy and sad best by far, which suggests that the model would perhaps very accurately on a binary classification task between those two classes. 

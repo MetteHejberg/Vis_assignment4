@@ -53,7 +53,7 @@ def load_dataset(net=True):
     """
 
     # Load and filter in Training/not Training data:
-    df = pd.read_csv(os.path.join("self_assigned", "fer2013.csv"))
+    df = pd.read_csv(os.path.join("in", "fer2013.csv"))
     training = df.loc[df['Usage'] == 'Training']
     testing = df.loc[df['Usage'] != 'Training']
 

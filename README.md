@@ -20,7 +20,7 @@ To run the code:
 - Install the packages mentioned in ```requirements.txt```
 - Set your current working directory to the level above ```src```
 - Download the data and place it in ```in```
-- Write in the command line: ```python src/emotion_classification.py -e "the epochs of the model" -b "the batch size of the model```
+- Write in the command line: ```python src/emotion_classification.py -e "the epochs of the model" -b "the batch size of the model"```
   - The outputs in ```out``` were created with: ```python src/emotion_classification.py -e 20 -b 64```
 
 ## 4. Discussion of Results 

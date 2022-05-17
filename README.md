@@ -10,7 +10,7 @@ or from this link: https://www.dropbox.com/s/zi48lkarsg4kbry/fer2013.csv\?dl\=1
 
 The ```load_dataset()``` function was found through https://colab.research.google.com/github/RodolfoFerro/PyConCo20/blob/full-code/notebooks/Deep%20Learning%20Model.ipynb#scrollTo=9v3fuYQb139s and further adapted. 
 
-The ```mdl()``` function was found through: https://www.kaggle.com/code/aayushmishra1512/emotion-detector and was further adapted. I tested different parameters and layers and found that the code found through this link, and reducing the epochs to 20, produced the highest validation data accuracy as well as the tightest fit between both the loss function and accuracy for the test and validation data. However, the code allows the user to define parameters such as epochs and batch size. 
+The ```mdl()``` function was found through: https://www.kaggle.com/code/aayushmishra1512/emotion-detector and was further adapted. I tested different parameters and layers and found that the code found through this link, and reducing the epochs to 20, produced the highest validation data accuracy as well as the tightest fit between both the loss function and accuracy for the test and validation data. However, the code allows the user to define epochs and batch size.
 
 ## 3. Usage ```emotion_classification.py```
 To run the code:

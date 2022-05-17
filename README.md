@@ -1,7 +1,7 @@
 ## 1. Assignment 4 - self-assignment: emotion classification 
 Link to repository: https://github.com/MetteHejberg/Vis_assignment4
 
-For this assignment, I build a sequential convolutional neural network moel that classifies emotions in images.
+For this assignment, I build a sequential convolutional neural network model that classifies emotions in images.
 
 ## 2. Methods
 

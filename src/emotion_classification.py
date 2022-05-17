@@ -96,8 +96,9 @@ def load_dataset(net=True):
          "surprise"]
     return X_train, y_train , X_test, y_test, label_names
 
+
 # create model
-def mdl(X_train, y_train, X_test, y_test):
+def mdl(X_train, y_train, X_test, y_test, eps, b_size):
     # sequential model
     model= tf.keras.models.Sequential()
     # add layers
@@ -144,20 +145,20 @@ def mdl(X_train, y_train, X_test, y_test):
     # fit the training data to the model
     H = model.fit(X_train, y_train,
                     validation_data = (X_test, y_test),
-                    epochs = 20,  
-                    batch_size = 64)
+                    epochs = eps,  
+                    batch_size = b_size)
    
     return model, H
 
 # plotting function to see the loss and accuracy over time (epochs)
-def plot_history(H):
+def plot_history(H, eps):
     plt.style.use("seaborn-colorblind")
 
     # loss function plot
     plt.figure(figsize=(12,6))
     plt.subplot(1,2,1)
-    plt.plot(np.arange(0, 20), H.history["loss"], label="train_loss")
-    plt.plot(np.arange(0, 20), H.history["val_loss"], label="val_loss", linestyle=":")
+    plt.plot(np.arange(0, eps), H.history["loss"], label="train_loss")
+    plt.plot(np.arange(0, eps), H.history["val_loss"], label="val_loss", linestyle=":")
     plt.title("Loss curve")
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
@@ -166,15 +167,15 @@ def plot_history(H):
 
     # accuracy plot
     plt.subplot(1,2,2)
-    plt.plot(np.arange(0, 20), H.history["accuracy"], label="train_acc")
-    plt.plot(np.arange(0, 20), H.history["val_accuracy"], label="val_acc", linestyle=":")
+    plt.plot(np.arange(0, eps), H.history["accuracy"], label="train_acc")
+    plt.plot(np.arange(0, eps), H.history["val_accuracy"], label="val_acc", linestyle=":")
     plt.title("Accuracy curve")
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
     plt.tight_layout()
     plt.legend()
     plt.show()
-    f.savefig(os.path.join("out", "emotion_loss_accuracy.jpg"))
+    plt.savefig(os.path.join("out", "emotion_loss_accuracy.jpg"))
 
 # get predictions
 def preds(model, X_test, y_test, label_names):
@@ -195,18 +196,20 @@ def parse_args():
     # initialize argparse
     ap = argparse.ArgumentParser()
     # add command line parameters
-    ap.add_argument("-e", "-epochs", type=int, required=True, help="the emount of epochs of the model")
+    ap.add_argument("-e", "--eps", type=int, required=True, help="the emount of epochs of the model")
+    ap.add_argument("-b", "--b_size", type=int, required=True, help="the batch size of the model")
     args = vars(ap.parse_args())
     return args    
     
 # let's get the code to run!
 def main():
-    #args = parse_args()
+    args = parse_args()
     X_train, y_train , X_test, y_test, label_names = load_dataset(False)
-    model, H = mdl(X_train, y_train, X_test, y_test)
-    plot_history(H)
+    model, H = mdl(X_train, y_train, X_test, y_test, args["eps"], args["b_size"])
+    plot_history(H, args["eps"])
     preds(model, X_test, y_test, label_names)
 
 if __name__ == "__main__":
     main()
+
 

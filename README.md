@@ -1,4 +1,6 @@
 ## 1. Assignment 4 - self-assignment: emotion classification 
+Link to repository: https://github.com/MetteHejberg/Vis_assignment4
+
 Discription of what the script does and what kind of problem it tries to solve 
 
 ## 2. Methods

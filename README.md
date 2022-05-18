@@ -41,4 +41,4 @@ I tested different parameters and layers, where especially adding more epochs ma
 
 The images are grayscale which decreases the complexity the model can have. Furthermore, the images are very pixilated which could also impact the model's performance.
 
-Lastly, there is not the same about of images in each category, which in some instances skew the results, however this is not a general trend. Example, disgust only has 111 images with an accuracy of 51%. On the other hand, fear has an accuracy of 40% on 1024. 
+Lastly, there is not the same about of images in each category, which in some instances skew the results, however this is not a general trend. Example, disgust only has 111 images with an accuracy of 51%. On the other hand, fear has an accuracy of 40% on 1024 images. 

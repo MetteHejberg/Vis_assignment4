@@ -3,6 +3,15 @@ Link to repository: https://github.com/MetteHejberg/Vis_assignment4
 
 For this assignment, I build a sequential convolutional neural network model that classifies emotions in images.
 
+The emotions are:
+- angry = 0
+- disgust = 1
+- fear = 2
+- happy = 3
+- neutral = 4
+- sad = 5
+- surprise = 6
+
 ## 2. Methods
 
 Download data from command line: ```wget -O in/fer2013.csv https://www.dropbox.com/s/zi48lkarsg4kbry/fer2013.csv\?dl\=1```
@@ -13,6 +22,8 @@ The ```load_dataset()``` function was found through https://colab.research.googl
 The ```mdl()``` function was found through: https://www.kaggle.com/code/aayushmishra1512/emotion-detector and was further adapted. I tested different parameters and layers and found that the code found through this link, and reducing the epochs to 20, produced the highest validation data accuracy as well as the tightest fit between both the loss function and accuracy for the test and validation data. However, the code allows the user to define epochs and batch size.
 
 The script further plots the result of the loss function and the accuraries for both the training and validation data. Lastly, the script gets the predictions of the model and save the classification report.
+
+On kaggle they write the following about the dataset: The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centred and occupies about the same amount of space in each image. https://www.kaggle.com/datasets/msambare/fer2013
 
 ## 3. Usage ```emotion_classification.py```
 To run the code:

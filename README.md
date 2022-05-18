@@ -40,3 +40,5 @@ The model has an overall accuracy of 63% on the validation data. However, there 
 I tested different parameters and layers, where especially adding more epochs made the loss functions and accuracies of the validation and testing data to diverge. The code that produced the plots and classification report in ```out``` return the highest accuracy of all as well as the best fit between loss and accuracy.
 
 The images are grayscale which decreases the complexity the model can have. Furthermore, the images are very pixilated which could also impact the model's performance.
+
+Lastly, there is not the same about of images in each category, which in some instances skew the results, however this is not a general trend. Example, disgust only has 111 images with an accuracy of 51%. On the other hand, fear has an accuracy of 40% on 1024. 

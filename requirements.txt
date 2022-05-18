@@ -20,6 +20,6 @@ Import the following libraries to run self_assignment.py:
 - sys
 - matplotlib.pyplot
 - pandas
-numpy
+- numpy
 - argparse
 
